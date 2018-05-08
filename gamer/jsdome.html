@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #box{
+            width: 500px;
+            height: 500px;
+        }
+        ul{
+            width: 500px;
+            height: 80px;
+        }
+        ul li{
+            float: left;
+            width: 80px;
+            height: 80px;
+        }
+        ul li img{
+            float: left;
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="images/武当.jpg" id="image" alt=""/>
+        <ul id="itemList">
+            <li><a href="images/武当.jpg" onclick="return changPic()" title="门派1" >
+                <img src="images/武当.jpg"  alt="门派1" />
+            </a></li>
+            <li><a href="images/峨眉.jpg" onclick="return changPic()" title="门派2">
+                <img src="images/峨眉.jpg"  alt="门派2" />
+            </a></li>
+            <li><a href="images/少林.jpg" onclick="return changPic(少林)" title="门派3">
+                <img src="images/少林.jpg"  alt="门派3" />
+            </a></li>
+            <li><a href="images/城管.jpg" onclick="return changPic(城管)" title="门派4">
+                <img src="images/城管.jpg"  alt="门派4" />
+            </a></li>
+        </ul>
+    </div>
+
+    <script>
+        function changPic(imgName){
+
+            var img = document.getElementById("image");
+            img.src = "images/"+imgName+".jpg";
+            return false;
+        }
+
+    </script>
+</body>
+</html>
